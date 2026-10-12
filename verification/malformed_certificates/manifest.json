@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "verifier": {
+    "path": "audits/verify_bigram_exact.py",
+    "sha256": "9766a92b69e04e700951b39416a743ea72f4d5eea517ff6136c8032636f99f37"
+  },
+  "semantics": {
+    "accepted_controls": 3,
+    "desired_rejection_exception": "ValueError",
+    "crash_is_not_rejection": true,
+    "note": "Expected outcomes encode desired verifier behavior, not permission to preserve a current crash."
+  },
+  "cases": [
+    {
+      "id": "accept_positive",
+      "path": "verification/malformed_certificates/cases/accept_positive.json",
+      "git_blob_sha1": "252cde053e4bf5cb6337130f4e45a752bdabdfc4",
+      "expected": {
+        "outcome": "PASS",
+        "kind": "exact_H1"
+      }
+    },
+    {
+      "id": "accept_negative",
+      "path": "verification/malformed_certificates/cases/accept_negative.json",
+      "git_blob_sha1": "cdd67525febde55bd2fc3165bbe1c2e0412ce076",
+      "expected": {
+        "outcome": "PASS",
+        "kind": "literal_infinite"
+      }
+    },
+    {
+      "id": "accept_huge_exact_gauge",
+      "path": "verification/malformed_certificates/cases/accept_huge_exact_gauge.json",
+      "git_blob_sha1": "011ce70db2e3d0228a4e2e261ac6907a36d8d14f",
+      "expected": {
+        "outcome": "PASS",
+        "kind": "exact_H1"
+      }
+    },
+    {
+      "id": "reject_false_float_precision",
+      "path": "verification/malformed_certificates/cases/reject_false_float_precision.json",
+      "git_blob_sha1": "0a28bf6a97468c11014a9d1a184e362ee90bf039",
+      "expected": {
+        "outcome": "REJECT",
+        "reason_regex": "exact integer"
+      }
+    },
+    {
+      "id": "reject_bool_as_int",
+      "path": "verification/malformed_certificates/cases/reject_bool_as_int.json",
+      "git_blob_sha1": "e22363fbb8b273bf199062694caa95bfd3adb85d",
+      "expected": {
+        "outcome": "REJECT",
+        "reason_regex": "exact integer"
+      }
+    },
+    {
+      "id": "reject_duplicate_coordinate",
+      "path": "verification/malformed_certificates/cases/reject_duplicate_coordinate.json",
+      "git_blob_sha1": "3876036b1579d517dd2be6c998f8d9eed0b05b91",
+      "expected": {
+        "outcome": "REJECT",
+        "reason_regex": "duplicate"
+      }
+    },
+    {
+      "id": "reject_malformed_rational",
+      "path": "verification/malformed_certificates/cases/reject_malformed_rational.json",
+      "git_blob_sha1": "9cd77af8f6ca459bc82899dbbcb20300c5ca6997",
+      "expected": {
+        "outcome": "REJECT",
+        "reason_regex": "exact rational"
+      }
+    },
+    {
+      "id": "reject_invalid_source_index",
+      "path": "verification/malformed_certificates/cases/reject_invalid_source_index.json",
+      "git_blob_sha1": "1845ed15f28519860d8917e434a0295bbae94aa5",
+      "expected": {
+        "outcome": "REJECT",
+        "reason_regex": "invalid source"
+      }
+    },
+    {
+      "id": "reject_silent_cycle",
+      "path": "verification/malformed_certificates/cases/reject_silent_cycle.json",
+      "git_blob_sha1": "a3ed1a10b56e7b9ba839f1ce67bc98c940cf4b3d",
+      "expected": {
+        "outcome": "REJECT",
+        "reason_regex": "acyclic silent graph"
+      }
+    },
+    {
+      "id": "reject_inconsistent_negative_metadata",
+      "path": "verification/malformed_certificates/cases/reject_inconsistent_negative_metadata.json",
+      "git_blob_sha1": "fdb8de8b9e65f6f8450574dbce9af708db43b140",
+      "expected": {
+        "outcome": "REJECT",
+        "reason_regex": "source_length"
+      }
+    },
+    {
+      "id": "reject_missing_required_weight",
+      "path": "verification/malformed_certificates/cases/reject_missing_required_weight.json",
+      "git_blob_sha1": "3d7d7b651fdc18778dba3675bbd981a2c583ac0a",
+      "expected": {
+        "outcome": "REJECT"
+      }
+    }
+  ],
+  "known_current_mismatch": {
+    "case": "reject_missing_required_weight",
+    "observed_at_verifier_commit": "KeyError crash",
+    "desired": "controlled ValueError rejection",
+    "evidence": "D issue #17 / PR #21 execution review"
+  }
+}

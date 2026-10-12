@@ -1,0 +1,44 @@
+{
+  "snapshot": "STD sanitized research snapshot",
+  "public_author": "Boogieboard113",
+  "python_version": "3.12.14",
+  "normal_unittest": {
+    "result": "PASS",
+    "tests": 166
+  },
+  "optimized_unittest": {
+    "result": "PASS",
+    "tests": 166
+  },
+  "quickstart": {
+    "result": "PASS",
+    "normal_optimized_output_identical": true
+  },
+  "malformed_certificate_corpus": {
+    "normal": "PASS",
+    "optimized": "PASS",
+    "cases": 11,
+    "controls": 3,
+    "required_rejections": 8,
+    "tampered_verifier_rejected": true
+  },
+  "structural_certificate": "PASS",
+  "source_comparison": {
+    "core_std_tools_byte_identical": true,
+    "other_changed_python_only_metadata": [
+      "tests/test_exponential_minor_family_exact_witnesses.py",
+      "experiments/pr6_literal_checker.py",
+      "experiments/rooted_inverse_oracle.py",
+      "experiments/support_pair_certificate_experiment.py",
+      "experiments/std3_cycle_spectrum_oracle.py",
+      "verification/2026-10-11/pr9_schema_probe.py"
+    ],
+    "adapter": "verification/malformed_certificates/run_corpus.py: private-checkout gate replaced by local checksum validation"
+  },
+  "omitted_test_modules": [
+    "test_repro_runner.py",
+    "test_recovered_source_provenance.py"
+  ],
+  "privacy_scope": "Packaged files and archive metadata only; publishing account and external correlations are outside this check.",
+  "proof_status": "Execution checks, not new mathematical approval or external peer review."
+}

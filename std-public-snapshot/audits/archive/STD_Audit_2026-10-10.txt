@@ -1,0 +1,241 @@
+STD AUDIT — CORE v15 AND PERMUTATION EXTENSIONS
+10 October 2026, America/Chicago
+
+VERDICT
+
+The reviewed fixed-horizon core and permutation-averaging results survive this
+audit. Their main finite computational totals were reproduced. One newer
+reset-gap theorem is false under its literal written assumptions because its
+proof ignores admissible runs outside the reset orbit. A precise scope repair
+and a two-state counterexample are included.
+
+Two global permutation arguments were only sketched in the latest report. The
+attached proof supplement supplies explicit padded closed-run witnesses, a
+finite periodic-phase test, and constants for the claimed linear lower bound.
+These remain internal mathematics, not external review or formal verification.
+
+STD has a credible specialized research core. It is not a completed general
+theory of sequence transformations, and its entire implementation is not
+formally verified. No meaningful overall percentage-complete follows from
+the number of ledger entries.
+
+WHAT THIS AUDIT COVERED
+
+Retrieved the latest canonical theorem ledger v15, the complete Core 0.1
+archive, both permutation research reports and their validation summaries,
+the reset-gap note and program, support-pair material, and selected earlier
+finite-type, cohomological, global-horizon and audit records. Primary external
+sources were checked for the rational-relation conjugacy and word-equation
+results used below. Input filenames and SHA-256 hashes are in input_provenance.json.
+
+This is a targeted audit of the active prediction-horizon chain, not a reproof
+of all 207 historical claims. Optimization, recovery, profile circuits,
+semirings and sieve branches retain their prior status unless specifically
+covered here. No Lean source was recompiled. No third party reviewed this work.
+
+MATHEMATICAL FINDINGS
+
+1. Fixed-horizon closure: supported in the stated model.
+
+The graph model quantifies over all nonempty closed runs and uses raw cyclic
+counts. Additive statistics, connected Euler realizations, component row-space
+identities and exact support-pair compatibility fit together coherently.
+The open-positive-cone perturbation argument preserves genuine single cyclic
+witnesses because positive supports are strongly connected and balanced.
+Fixed length/inventory restrictions cannot be added without changing that proof.
+
+Core's bounded minimum-horizon search correctly distinguishes a proved finite
+minimum from a finite lower bound. Repeated fixed-order failures alone do not
+certify infinity. This distinction remains essential.
+
+2. Reynolds / permutation averaging: supported.
+
+For total permutation actions and a bounded-local additive statistic, finite
+ordinary horizon, same-source closed-run invariance, and exact uniform-state
+averaging are equivalent. The power-and-average proof works without transitivity.
+The synchronized cycle test and bounded-silence estimate also survive review:
+
+    finite H_T(k) implies H_T(k) <= 1+(R+1)(k-1).
+
+For nonerasing machines R=0, this gives H_T(k)<=k whenever finite. For k=1,
+every total permutation machine has horizon 1 or infinity, including erasure.
+The supplement spells out the missing power-lifting justification needed for
+necessity of the exact source-only minimum-rank formula.
+
+Small correction: rational certificates and effective rank algorithms require
+rational or otherwise effectively represented exact coefficients. The abstract
+characteristic-zero vector-space theorem is more general than its rational
+implementation claim. Integer output histogram weights meet the requirement.
+
+3. Global permutation closure and spectrum: supported with proof supplements.
+
+The acyclic-silence reduction to conjugacy of a rational synchronized-loop
+relation is sound and relies on an established external decidability theorem.
+It is a decision reduction, not a newly implemented polynomial-time STD solver.
+
+Deep Research Pass II's silent-padding and Theta(k) arguments originally omit
+their actual rearranged words and quantitative details. The supplement supplies
+them using a common-prefix padding lemma and the classical word-square theorem.
+This audit therefore does not label the global claims disproved. It supplies
+the missing argument instead of treating their validation JSON as proof.
+
+The resulting scoped classification remains: global closure gives either
+H_T(k)=1 for all k in the common-periodic case, or H_T(k)=Theta(k) in the
+nonperiodic bounded-silence case. Silent cycles under global closure force the
+common-periodic branch.
+
+4. Reset-gap theorem: correction required.
+
+The written model restricts b only on the a-orbit of q0 but then speaks about
+all closed runs containing b. Consider two states, each with an a self-loop
+of weight 0. Put a b self-loop of weight 0 at q0 and weight 1 at the other state.
+All the stated orbit assumptions hold. The orbit test reports a finite bound,
+but the identical source word b has two different values. Hence H=infinity.
+
+Correct the domain to b-containing closed runs within the a-orbit of q0, or
+require every b transition in the entire graph to reset to q0. The residual
+theorem and its proof then survive. The supplied program already uses the
+stronger implicit reset representation, which explains why its tests pass.
+
+The original command-line script also writes to a hard-coded /mnt/data path;
+direct execution failed when that directory was absent. Importing its validate()
+function reproduced all results. This is a portability issue, separate from
+the mathematical scope error. The audit reproduction wrapper avoids that path.
+
+REPRODUCED EVIDENCE
+
+Core 0.1, normal and optimized Python:
+
+  - 11 named horizon cases passed.
+  - 630 periodic marginalization checks passed in each mode.
+  - 13 altered horizon certificates were rejected in each mode.
+  - All 625 cross-solver decisions agreed: 451 sufficient, 174 insufficient.
+  - Six complete reference bundles passed and six instance-binding mutations
+    were rejected in each mode.
+
+An initial cross-solver attempt lacked SymPy; installing the pinned 1.14.0
+dependency in an isolated task directory resolved it. This was an environment
+dependency issue, not a mathematical failure. The primary core tests had already
+passed before the dependency was installed.
+
+Permutation surveys, independently reimplemented using only exact integers,
+Fractions, graph SCCs and rational elimination:
+
+  Family: all 9,604 two-state binary-source machines with emissions from
+          {empty,0,1,00,01,10,11}; 6,984 have acyclic silence.
+
+  Output order   Infinite    H=1    H=2    H=3
+       1           5,956    1,028      0      0
+       2           6,288      620     76      0
+       3           6,484      332    144     24
+
+  Family: all 26,244 three-state binary-source machines with emissions from
+          {empty,0,1}; 10,584 have acyclic silence.
+
+  Output order   Infinite    H=1    H=2    H=3
+       1          10,164      420      0      0
+       2          10,248      264     72      0
+       3          10,296      216      0     72
+
+These match every distribution reported in Deep Research Pass II. The earlier
+transitive-only totals also match: three-state finite counts 380,296,248,224
+at output orders 1,2,3,4; and the complete reported two-state distributions.
+The two reports count different machine families, explaining their differing
+totals. The 172/52 structural split among the 224 survivors and the earlier
+random surveys were not independently rerun; their prior evidence is retained.
+
+Additional independent checks:
+
+  - 15,249 direct closed-run comparisons between local emission tables and
+    actual cyclic output histograms, including periods shorter than k or L.
+  - 1,128 Reynolds identities checked against direct outputs.
+  - 180 source padding checks and 170 nonconjugate word-square regressions.
+  - A concrete three-state example reproducing the failed stronger claim:
+    the averaged output-pair table can require source order 3 although the
+    original machine has infinite pair horizon. The exact machine is included.
+  - A Core-produced insufficient certificate for the reset-gap counterexample;
+    its identical-source form proves failure at every horizon, not just h=1.
+
+Reset-gap restricted implementation:
+
+  All 500 generated machines reproduce the stated split of 266 finite and 234
+  infinite cases, 19,440 predictor checks and 1,404 infinity-witness checks,
+  with zero failures. This does not rescue the broader written domain.
+
+Finite tests support the implementations in those scopes. They do not establish
+the open bounded-erasure conjecture or universal correctness of Python code.
+
+LEDGER AND REPRODUCIBILITY
+
+The latest canonical ledger contains 207 unique IDs, no missing dependencies,
+no dependency cycles, no undefined status labels, and correct status totals.
+There are still 60 entries with empty scope fields. Six entries carry inherited
+proof-assistant-core status; this audit did not rebuild their proofs and does
+not extend that label to the new horizon or permutation code.
+
+The 82 Core archive hashes and five reset-gap archive hashes all match. The
+latest permutation deliverables retrieved here are reports and aggregate JSON,
+without the original survey programs or per-case certificates. This audit
+adds executable independent survey code and data, partially closing that gap.
+It does not reconstruct the original runs or verify the reported random sample.
+
+The canonical ledger and original reports remain unchanged. This packet is an
+audit and erratum, with supporting derivations, not a silent status promotion.
+
+WHAT REMAINS OPEN
+
+  - A general finite/infinite ordinary-horizon decision procedure for arbitrary
+    finite-state transducers, beyond the established structural subclasses.
+  - The sharper acyclic-silence permutation conjecture:
+        H_T(k)<infinity implies H_T(k)<=k.
+    Both exhaustive families support it, but no proof is supplied here.
+  - An executable certificate-producing implementation of the full permutation
+    global-closure algorithm, including its word-relation decision step.
+  - Independent external review and a formally checked certificate kernel.
+  - Scalable algorithms and clear contracts connecting the other STD branches.
+
+RECOMMENDED NEXT WORK
+
+First adopt the reset-gap scope erratum and complete the 60 missing historical
+scope fields. Package the permutation solver with portable commands, named
+models, positive potentials and negative literal runs. Use the explicit proof
+supplement as the basis of a reviewed successor ledger. After that consolidation,
+the sharp H_T(k)<=k conjecture is the focused mathematical target; arbitrary
+transition monoids remain the larger research frontier.
+
+FILES AND REPRODUCTION
+
+  std_permutation_audit.py
+      python3 std_permutation_audit.py --full --output permutation_survey.json
+      Standard library only; exact h-minima at k<=3, finite/infinite test at k=4.
+
+  run_audit_checks.py
+      python3 run_audit_checks.py
+      Standard library only; direct emission and witness regressions.
+
+  reproduce_upstream.py
+      python3 reproduce_upstream.py PATH_TO_EXTRACTED_CORE PATH_TO_RESET_PROGRAM
+      Core cross-comparisons require SymPy 1.14.0. Rerun in a working copy
+      because the upstream Core validator writes its evidence and certificates.
+
+  STD_Audit_Proof_Supplement_2026-10-10.txt
+      Explicit proof details, precise model correction and source links.
+
+  permutation_survey.json, independent_checks.json, reset_gap_rerun.json,
+  rerun_core_*.json, rerun_cross_*.json, reset_scope_core_certificate.json,
+  ledger_audit.json and input_provenance.json
+      Executed results, counters, exact examples and input identities.
+
+PRIMARY EXTERNAL SOURCES
+
+  Aiswarya, Manuel and Sunny, Deciding Conjugacy of a Rational Relation:
+  https://arxiv.org/abs/2307.06777
+
+  Filiot, Jecker, Madnani and Sunny, Approximate Problems for Finite Transducers,
+  ICALP 2025: https://doi.org/10.4230/LIPIcs.ICALP.2025.155
+
+  Holub and Starosta, formal word-equation development in the Archive of Formal
+  Proofs: https://isa-afp.org/browser_info/current/AFP/Combinatorics_Words/Lyndon_Schutzenberger.html
+
+The external facts support specified proof steps; they do not establish STD's
+novelty, general completeness, or implementation correctness.

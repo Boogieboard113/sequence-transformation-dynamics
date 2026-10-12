@@ -1,0 +1,209 @@
+{
+  "accepted_support_pair_theorem_merge": "private-history-omitted",
+  "arithmetic": "fractions.Fraction only",
+  "edge_type_cap": 8,
+  "full_binary_bigram_fixture": {
+    "bounded_direct_domain": {
+      "max_source_length": 8,
+      "rooted_words": 510
+    },
+    "edge_types": 4,
+    "h1_bounded_direct": {
+      "checked_words_until_witness": 20,
+      "target_values": [
+        1,
+        0
+      ],
+      "witness": [
+        "0011",
+        "0101"
+      ]
+    },
+    "h1_certificate": {
+      "coordinate": "b",
+      "integer_s": {
+        "01": 2,
+        "10": 2
+      },
+      "integer_t": {
+        "00": 1,
+        "01": 1,
+        "10": 1,
+        "11": 1
+      },
+      "rational_s": {
+        "01": "2",
+        "10": "2"
+      },
+      "rational_t": {
+        "00": "1",
+        "01": "1",
+        "10": "1",
+        "11": "1"
+      },
+      "scale": 1,
+      "sign": -1,
+      "source_s": "0101",
+      "source_t": "0011",
+      "support_s": [
+        "01",
+        "10"
+      ],
+      "support_t": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "target_s": 0,
+      "target_t": 1
+    },
+    "h1_exact_support_pair_decision": "insufficient",
+    "h1_solver_stats_until_first_certificate": {
+      "edge_types": 4,
+      "lp_instances": 35,
+      "ordered_support_pairs": 36,
+      "supports": 6
+    },
+    "h2_bounded_direct": {
+      "checked_words": 510,
+      "witness": null
+    },
+    "h2_exact_support_pair_decision": "sufficient",
+    "h2_solver_stats": {
+      "edge_types": 4,
+      "lp_instances": 72,
+      "ordered_support_pairs": 36,
+      "supports": 6
+    },
+    "interpretation": "proper strongly connected sub-supports are enumerated explicitly; bounded direct enumeration is not the proof of h2 sufficiency",
+    "support_count": 6,
+    "supports": [
+      [
+        "00"
+      ],
+      [
+        "11"
+      ],
+      [
+        "01",
+        "10"
+      ],
+      [
+        "00",
+        "01",
+        "10"
+      ],
+      [
+        "01",
+        "10",
+        "11"
+      ],
+      [
+        "00",
+        "01",
+        "10",
+        "11"
+      ]
+    ]
+  },
+  "issue": 44,
+  "limitations": [
+    "implementation is a small exact reference solver, not a practical general LP engine",
+    "edge supports are exhaustively enumerated only up to eight recurrent edge types",
+    "fixed length, fixed inventory, upper count bounds, and other nonhomogeneous domains are excluded",
+    "bounded direct-word searches are supporting evidence and are not substituted for the accepted theorem"
+  ],
+  "pinned_main": "private-history-omitted",
+  "pr25_fixture": {
+    "bounded_direct_domain": {
+      "admissible_rooted_words": 24,
+      "max_source_length": 12
+    },
+    "edge_types": 6,
+    "h1_bounded_direct": {
+      "checked_words_until_witness": 4,
+      "target_values": [
+        4,
+        0
+      ],
+      "witness": [
+        "0011",
+        "0101"
+      ]
+    },
+    "h1_certificate": {
+      "coordinate": "a",
+      "integer_s": {
+        "01010": 6,
+        "10101": 6
+      },
+      "integer_t": {
+        "00110": 3,
+        "01100": 3,
+        "10011": 3,
+        "11001": 3
+      },
+      "rational_s": {
+        "01010": "3",
+        "10101": "3"
+      },
+      "rational_t": {
+        "00110": "3/2",
+        "01100": "3/2",
+        "10011": "3/2",
+        "11001": "3/2"
+      },
+      "scale": 2,
+      "sign": -1,
+      "source_s": "010101010101",
+      "source_t": "001100110011",
+      "support_s": [
+        "01010",
+        "10101"
+      ],
+      "support_t": [
+        "00110",
+        "01100",
+        "10011",
+        "11001"
+      ],
+      "target_s": 0,
+      "target_t": 12
+    },
+    "h1_exact_support_pair_decision": "insufficient",
+    "h1_solver_stats_until_first_certificate": {
+      "edge_types": 6,
+      "lp_instances": 3,
+      "ordered_support_pairs": 4,
+      "supports": 2
+    },
+    "h2_bounded_direct": {
+      "checked_words": 24,
+      "witness": null
+    },
+    "h2_exact_support_pair_decision": "sufficient",
+    "h2_solver_stats": {
+      "edge_types": 6,
+      "lp_instances": 8,
+      "ordered_support_pairs": 4,
+      "supports": 2
+    },
+    "interpretation": "h2 sufficiency is theorem-backed by exhaustive exact support-pair infeasibility; the bounded word search is supporting evidence only",
+    "supports": [
+      [
+        "01010",
+        "10101"
+      ],
+      [
+        "00110",
+        "01100",
+        "10011",
+        "11001"
+      ]
+    ]
+  },
+  "random_seed": null,
+  "reviewed_worked_example_merge": "private-history-omitted",
+  "status": "pass"
+}

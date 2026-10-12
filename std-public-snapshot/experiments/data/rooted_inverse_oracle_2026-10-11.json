@@ -1,0 +1,136 @@
+{
+  "counted_objects": "rooted source words",
+  "coverage": {
+    "all_erasure_formula_cases": 16,
+    "deletion_formula_cases": 52,
+    "identity_formula_cases": 126,
+    "named_examples": 6,
+    "radius0_dp_crosscheck_cases": 1125,
+    "total_asserted_cases": 1325
+  },
+  "deterministic_seed": null,
+  "erasure_semantics": "empty site emissions consume one source site and append no output symbols",
+  "exact_arithmetic": true,
+  "limitations": [
+    "finite exhaustive source-length bounds only",
+    "no source-rotation quotient; source words are counted",
+    "no all-length finiteness/infinity decision",
+    "radius-0 DP comparator is not used for contextual rules",
+    "no production inverse-counting implementation exists on pinned main to cross-check"
+  ],
+  "named_examples": {
+    "all_erased": {
+      "alphabet": "01",
+      "count": 8,
+      "lengths": [
+        3
+      ],
+      "preimages": [
+        "000",
+        "001",
+        "010",
+        "011",
+        "100",
+        "101",
+        "110",
+        "111"
+      ],
+      "radius": 0,
+      "target": ""
+    },
+    "contextual_short_period": {
+      "alphabet": "01",
+      "count": 3,
+      "lengths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "preimages": [
+        "0",
+        "01",
+        "10"
+      ],
+      "radius": 1,
+      "target": "0"
+    },
+    "deletion_multiple": {
+      "alphabet": "01",
+      "count": 6,
+      "lengths": [
+        4
+      ],
+      "preimages": [
+        "0011",
+        "0101",
+        "0110",
+        "1001",
+        "1010",
+        "1100"
+      ],
+      "radius": 0,
+      "target": "11"
+    },
+    "deletion_zero": {
+      "alphabet": "01",
+      "count": 0,
+      "lengths": [
+        4
+      ],
+      "preimages": [],
+      "radius": 0,
+      "target": "11111"
+    },
+    "identity_unique": {
+      "alphabet": "01",
+      "count": 1,
+      "lengths": [
+        3
+      ],
+      "preimages": [
+        "010"
+      ],
+      "radius": 0,
+      "target": "010"
+    },
+    "rooted_cut": {
+      "alphabet": "ab",
+      "count": 1,
+      "lengths": [
+        2
+      ],
+      "preimages": [
+        "ab"
+      ],
+      "radius": 0,
+      "rotation_equivalent_count": 2,
+      "target": "ab"
+    }
+  },
+  "output_equality": "exact rooted string equality",
+  "provenance": {
+    "base_main_commit": "private-history-omitted",
+    "branch": "experiments/c-rooted-inverse-oracle",
+    "input_blobs": {
+      "AGENTS.md": "private-history-omitted",
+      "README.md": "private-history-omitted",
+      "audits/archive/STD_Recovery_Spectrum_Status_2026-10-09.md": "private-history-omitted",
+      "docs/CONCURRENCY_PROTOCOL.md": "private-history-omitted",
+      "docs/RESEARCH_STATE.md": "private-history-omitted",
+      "docs/TASK_BOARD.md": "private-history-omitted",
+      "std_tools/cyclic.py": "private-history-omitted",
+      "tests/test_cyclic.py": "private-history-omitted"
+    },
+    "issue": 3,
+    "production_inverse_comparator_on_pinned_main": null,
+    "reference_archive_claim_used_only_for_named_fixture": "target 0 under contextual 010 erasure has reported complete fiber {0,01,10}; oracle checks lengths 1..8 only",
+    "repository": "STD sanitized snapshot"
+  },
+  "source_lengths": "positive integers explicitly supplied to each bounded query",
+  "status": "pass"
+}

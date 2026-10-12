@@ -1,0 +1,34 @@
+{
+  "status": "infinite",
+  "H_T(2)": "infinity",
+  "certificate_type": "literal_same_source",
+  "witness": {
+    "start_state": 0,
+    "source_word": [
+      0,
+      0,
+      1
+    ],
+    "output_from_start": [
+      "1",
+      "0",
+      "1"
+    ],
+    "output_from_other": [
+      "1",
+      "0"
+    ],
+    "histogram_difference": [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "count_difference": 1
+      }
+    ],
+    "source_length": 3,
+    "length_bound": 32
+  },
+  "assurance": "unconditional explicit negative witness"
+}

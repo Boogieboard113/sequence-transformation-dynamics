@@ -1,0 +1,212 @@
+{
+  "date": "2026-10-11",
+  "different_exact_C3_bounds": {
+    "cyclic_avoid_000": [
+      "001001"
+    ],
+    "cyclic_output_witnesses": {
+      "000101": {
+        "C3_000": 1,
+        "C3_001": 1,
+        "macro_tour": [
+          "00",
+          "00",
+          "01",
+          "01"
+        ],
+        "output_word": "000101",
+        "source_word": "000101"
+      },
+      "001001": {
+        "C3_000": 0,
+        "C3_001": 2,
+        "macro_tour": [
+          "00",
+          "01",
+          "00",
+          "01"
+        ],
+        "output_word": "001001",
+        "source_word": "001001"
+      }
+    },
+    "macro_circuits_with_fixed_anchor": 6,
+    "raw_output_pattern_bounds": {
+      "000": [
+        0,
+        1
+      ],
+      "001": [
+        1,
+        2
+      ]
+    },
+    "reduction": {
+      "branches": [
+        "0"
+      ],
+      "histogram": {
+        "00": 2,
+        "01": 2,
+        "10": 2
+      },
+      "kind": "branched",
+      "macros": {
+        "00": {
+          "end": "0",
+          "multiplicity": 2,
+          "path": [
+            "00"
+          ],
+          "start": "0"
+        },
+        "01": {
+          "end": "0",
+          "multiplicity": 2,
+          "path": [
+            "01",
+            "10"
+          ],
+          "start": "0"
+        }
+      },
+      "period": [],
+      "period_repetitions": 0
+    }
+  },
+  "disconnected_balanced_support": {
+    "branches": [],
+    "histogram": {
+      "00": 1,
+      "11": 1
+    },
+    "kind": "infeasible",
+    "macros": {},
+    "period": [],
+    "period_repetitions": 0
+  },
+  "erasure_cap": {
+    "cyclic_outputs_at_cap_0": [],
+    "cyclic_outputs_at_cap_1": [
+      "xx"
+    ],
+    "histogram": {
+      "0": 2,
+      "1": 2
+    },
+    "silence_run_witnesses": {
+      "1": {
+        "macro_tour": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        "source_word": "0101"
+      },
+      "2": {
+        "macro_tour": [
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        "source_word": "0011"
+      }
+    }
+  },
+  "merge_shared_forced_type": {
+    "original_edges": 7,
+    "path_type_coverage": {
+      "000": 2,
+      "001": 1,
+      "010": 2,
+      "100": 1,
+      "101": 1
+    },
+    "reduced_macro_traversals": 5,
+    "reduction": {
+      "branches": [
+        "00",
+        "10"
+      ],
+      "histogram": {
+        "000": 2,
+        "001": 1,
+        "010": 2,
+        "100": 1,
+        "101": 1
+      },
+      "kind": "branched",
+      "macros": {
+        "000": {
+          "end": "00",
+          "multiplicity": 2,
+          "path": [
+            "000"
+          ],
+          "start": "00"
+        },
+        "001": {
+          "end": "10",
+          "multiplicity": 1,
+          "path": [
+            "001",
+            "010"
+          ],
+          "start": "00"
+        },
+        "100": {
+          "end": "00",
+          "multiplicity": 1,
+          "path": [
+            "100"
+          ],
+          "start": "10"
+        },
+        "101": {
+          "end": "10",
+          "multiplicity": 1,
+          "path": [
+            "101",
+            "010"
+          ],
+          "start": "10"
+        }
+      },
+      "period": [],
+      "period_repetitions": 0
+    },
+    "shared_010_macros": [
+      "001",
+      "101"
+    ]
+  },
+  "pure_cycle": {
+    "cyclic_outputs": [
+      "abab"
+    ],
+    "reduction": {
+      "branches": [],
+      "histogram": {
+        "01": 2,
+        "10": 2
+      },
+      "kind": "cycle",
+      "macros": {},
+      "period": [
+        "01",
+        "10"
+      ],
+      "period_repetitions": 2
+    }
+  },
+  "purpose": "Exact executable witness certificates; not formal proof.",
+  "rooted_cut_counterexample": {
+    "invalid_arbitrary_output_cut": "ba",
+    "rooted_outputs": [
+      "ab"
+    ]
+  },
+  "version": 1
+}

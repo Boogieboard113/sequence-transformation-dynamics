@@ -1,0 +1,326 @@
+{
+  "status": "finite",
+  "H_T(2)": 1,
+  "certificate_type": "zero_cycle_potential+Round4_structural_theorem",
+  "zero_cycle_potential": [
+    [],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": 0
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ],
+    [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "weight": -2
+      }
+    ]
+  ],
+  "coefficient_table": {
+    "0": [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "coefficient": "1"
+      }
+    ],
+    "1": [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "coefficient": "2"
+      }
+    ],
+    "2": [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "coefficient": "3"
+      }
+    ],
+    "3": [
+      {
+        "pair": [
+          "1",
+          "1"
+        ],
+        "coefficient": "2"
+      }
+    ]
+  },
+  "assurance": "theorem conditional on auditable finite exhaustive 4-letter coordinate computation"
+}

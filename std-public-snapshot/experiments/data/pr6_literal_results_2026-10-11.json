@@ -1,0 +1,75 @@
+{
+  "families": [
+    {
+      "L": 4,
+      "columns": 60,
+      "empty_outputs": 0,
+      "nonempty_output_lt_k": 6,
+      "period_lt_L": 30,
+      "words": 1790
+    },
+    {
+      "L": 9,
+      "columns": 274,
+      "empty_outputs": 0,
+      "nonempty_output_lt_k": 7,
+      "period_lt_L": 284,
+      "words": 525
+    },
+    {
+      "L": 1,
+      "columns": 2,
+      "empty_outputs": 9,
+      "nonempty_output_lt_k": 0,
+      "period_lt_L": 0,
+      "words": 1022
+    }
+  ],
+  "horizon": {
+    "full_identity_k2_h1_witness": [
+      "0011",
+      "0101"
+    ],
+    "no00_identity_k2_h1_conflict": null,
+    "no00_identity_k3_h2_witness": [
+      "011101",
+      "011011"
+    ],
+    "no00_words_through_12": 840
+  },
+  "issue7": {
+    "empty": {
+      "raw": [
+        "01"
+      ],
+      "recurrent": [],
+      "word_count": 0
+    },
+    "multi": {
+      "raw": [
+        "00",
+        "01",
+        "11"
+      ],
+      "recurrent": [
+        "00",
+        "11"
+      ],
+      "word_count": 20
+    },
+    "transient": {
+      "raw": [
+        "00",
+        "01"
+      ],
+      "recurrent": [
+        "00"
+      ],
+      "word_count": 10
+    }
+  },
+  "matrix_whole_word_checks": 3337,
+  "pr6_head": "private-history-omitted",
+  "scope": "bounded exact computation; not a general theorem; support-pair LP proof not audited",
+  "status": "pass"
+}

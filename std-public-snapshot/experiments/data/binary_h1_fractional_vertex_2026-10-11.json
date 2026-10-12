@@ -1,0 +1,170 @@
+{
+  "active_sets_tested": 715,
+  "all_vertex_denominators": [
+    2
+  ],
+  "equalities_rank": 8,
+  "first_any_support": {
+    "c1": [
+      4,
+      2
+    ],
+    "length": 6,
+    "target_counts": [
+      2,
+      0
+    ],
+    "x": "000011",
+    "y": "001001"
+  },
+  "first_both_full": {
+    "c1": [
+      9,
+      5
+    ],
+    "length": 14,
+    "target_counts": [
+      3,
+      1
+    ],
+    "x": "00000100110011",
+    "y": "00010010010011"
+  },
+  "graph": [
+    "000",
+    "001",
+    "010",
+    "011",
+    "100",
+    "110"
+  ],
+  "literal_length_rows": [
+    {
+      "both_supports_full": 0,
+      "length": 1,
+      "rooted_words": 1
+    },
+    {
+      "both_supports_full": 0,
+      "length": 2,
+      "rooted_words": 1
+    },
+    {
+      "both_supports_full": 0,
+      "length": 3,
+      "rooted_words": 4
+    },
+    {
+      "both_supports_full": 0,
+      "length": 4,
+      "rooted_words": 9
+    },
+    {
+      "both_supports_full": 0,
+      "length": 5,
+      "rooted_words": 11
+    },
+    {
+      "both_supports_full": 0,
+      "length": 6,
+      "rooted_words": 16
+    },
+    {
+      "both_supports_full": 0,
+      "length": 7,
+      "rooted_words": 29
+    },
+    {
+      "both_supports_full": 16,
+      "length": 8,
+      "rooted_words": 49
+    },
+    {
+      "both_supports_full": 27,
+      "length": 9,
+      "rooted_words": 76
+    },
+    {
+      "both_supports_full": 40,
+      "length": 10,
+      "rooted_words": 121
+    },
+    {
+      "both_supports_full": 88,
+      "length": 11,
+      "rooted_words": 199
+    },
+    {
+      "both_supports_full": 180,
+      "length": 12,
+      "rooted_words": 324
+    },
+    {
+      "both_supports_full": 299,
+      "length": 13,
+      "rooted_words": 521
+    },
+    {
+      "both_supports_full": 518,
+      "length": 14,
+      "rooted_words": 841
+    }
+  ],
+  "scaled_vertex_words": {
+    "length": 22,
+    "source_c1": [
+      14,
+      8
+    ],
+    "target_counts": [
+      4,
+      2
+    ],
+    "x": "0000001001001100110011",
+    "y": "0000100100100100110011"
+  },
+  "smaller_graph_survey": [
+    {
+      "active_sets": 42,
+      "edge_types": 3,
+      "feasible_vertices": 0,
+      "fractional_vertices": 0,
+      "graphs": 2,
+      "target_instances": 6
+    },
+    {
+      "active_sets": 612,
+      "edge_types": 4,
+      "feasible_vertices": 0,
+      "fractional_vertices": 0,
+      "graphs": 5,
+      "target_instances": 20
+    },
+    {
+      "active_sets": 4400,
+      "edge_types": 5,
+      "feasible_vertices": 8,
+      "fractional_vertices": 0,
+      "graphs": 6,
+      "target_instances": 30
+    }
+  ],
+  "source_order": 1,
+  "target": "000",
+  "vertices": [
+    [
+      "2",
+      "5/2",
+      "1",
+      "3/2",
+      "5/2",
+      "3/2",
+      "1",
+      "3",
+      "2",
+      "1",
+      "3",
+      "1"
+    ]
+  ]
+}
